@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Grape+Nuts&family=Hammersmith+One&display=swap');
+
+:root {
+    --primaria: #8b5e8d;
+    --secundaria: #613b63;
+    --terciaria: #814b83;
+    --quartenaria: #e5c8e6;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100%;
+    background-color: var(--quartenaria);
+    overflow: hidden;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 15vh;
+    background-color: var(--primaria);
+    background-image: url(img/textureheader.png);
+    background-size: 100vw;
+    background-position: -50%;
+    z-index: 15;
+}
+header img {
+    width: 12vh;
+    height: 12vh;
+    margin: 5vw;
+}
+header form #search {
+    width: 50vw;
+    height: 6vh;
+    padding: 2vh;
+    border: none;
+    border-radius: 6vh;
+    margin: 5vw;
+    background-color: white;
+    font-size: 2.5vh;
+    font-weight: 700;
+    letter-spacing: 0.4vh;
+    word-spacing: 0.8vh;
+}
+
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+    margin: 25vh 10vw 0 10vw;
+}
+main #opcoes::before,
+main #opcoes::after {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    right: -20vw;
+    bottom: -50vh;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 15vw;
+    background-color: var(--secundaria);
+    z-index: 5;
+}
+main #opcoes::after{
+    width: 24vw;
+    height: 24vw;
+    border-radius: 12vw;
+    margin: 3vw;
+    background-color: var(--terciaria);
+    z-index: 6;
+}
+
+
+main #opcoes {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    z-index: 10;
+}
+main #opcoes a {
+    text-decoration: none;
+}
+@keyframes animacao-selecionar-opcoes {
+    20% {
+        transform: translateY(10vh);
+    }
+    30% {
+        transform: translateY(10vh);
+    }
+    100% {
+        transform: translateY(-150vh);
+    }
+}
+@keyframes animacao-selecionar-header {
+    30% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-150vh);
+    }
+}
+@keyframes animacao-selecionar-receitas {
+    0%{
+        transform: translateY(150vh)
+    }
+    30% {
+        transform: translateY(150vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+main #opcoes button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 120px;
+    border: none;
+    border-radius: 2vw;
+    margin: 2vw;
+    background-color: var(--primaria);
+    background-size: 100%;
+    background-position: -50%;
+    background-repeat: no-repeat;
+}
+main #opcoes button h2 {
+    color: white;
+    font-size: 70px;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: "Grape Nuts", cursive;
+}
+main #opcoes button:hover {
+    scale: 1.05;
+    animation: section-animation 2.5s ease-in-out infinite;
+}
+@keyframes section-animation {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-2vh);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#botao-doces {
+    background-image: url(img/doces.png);
+}
+#botao-assados {
+    background-image: url(img/assados.png);
+}
+#botao-salgados {
+    background-image: url(img/salgados.png);
+}
+#botao-bebidas {
+    background-image: url(img/bebidas.png);
+}
+
+
+
+
+
+
+
+
+
+
+#receitas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    transform: translateY(150vh);
+}
+#receitas .receita-categoria {
+    display: none;
+}
+
+#receitas div #lista-receitas {
+    position: fixed;
+    width: 30vw;
+    height: 80vh;
+    border-radius: 3vw;
+    margin: 10vh 10vw;
+    background-color: var(--primaria);
+    z-index: 10;
+}
+#receitas div::after {
+    content: "";
+    display: inline-block;
+    position: fixed;
+    left: -2vw;
+    top: -3vh;
+    width: 30vw;
+    height: 80vh;
+    border-radius: 3vw;
+    margin: 10vh 10vw;
+    background-color: var(--secundaria);
+    z-index: 5;
+}
+#receitas div #lista-receitas ul li{
+    padding: 0.8vh;
+    border-radius: 1vw;
+    margin: 2vh 1vw;
+    background-color: var(--secundaria);
+    color: var(--quartenaria);
+    font-size: 2vw;
+    font-weight: 600;
+    letter-spacing: 0.2vw;
+    word-spacing: 0.5vw;
+    font-family: "Grape Nuts", cursive;
+    list-style-type: none;
+}
+
+#receitas div .visualizacao-receita {
+    position: fixed;
+    right: 0;
+    width: 45vw;
+    height: 95vh;
+    border-radius: 1.5vw;
+    margin: 10vh 10vw;
+    background-color: white;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    z-index: 15;
+}
+#receitas div .visualizacao-receita::-webkit-scrollbar {
+    display: none;
+}
+#receitas div .visualizacao-receita h2 {
+    width: 100%;
+    padding: 1.5vw;
+    border-radius: 1.5vw;
+    background-color: var(--primaria);
+    color: white;
+    text-align: center;
+    font-size: 4vw;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    font-family: "Grape Nuts", cursive;
+}
+#receitas div .visualizacao-receita img {
+    width: 35vw;
+    height: 20vh;
+    border-radius: 1.5vw;
+    margin: 1vh 5vw;
+    object-fit: cover;
+}
+#receitas div .visualizacao-receita .fullview {
+    border-radius: 2vw;
+    height: min-content;
+}
+#receitas div .visualizacao-receita h3 {
+    width: 100%;
+    margin: 3vh 0 1vh 0;
+    text-align: center;
+    letter-spacing: 0.3vw;
+    word-spacing: 0.6vw;
+    font-size: 2.3vw;
+    font-family: "Hammersmith One", sans-serif;
+}
+#receitas div .visualizacao-receita span {
+    display: block;
+    margin: 5vh 0;
+}
+#receitas div .visualizacao-receita .ingredientes {
+    display: grid;
+    grid-template-columns: 20vw 20vw;
+    width: 40vw;
+    margin: 0 2.5vw;
+    letter-spacing: 0.08vw;
+    font-size: 1.1vw;
+    font-weight: 900;
+    font-family: "Hammersmith One", sans-serif;
+}
+#receitas div .visualizacao-receita .modo-de-preparo {
+    width: 40vw;
+    margin: 0 2.5vw;
+    letter-spacing: 0.08vw;
+    font-size: 1vw;
+    font-weight: 800;
+    font-family: "Hammersmith One", sans-serif;
+}

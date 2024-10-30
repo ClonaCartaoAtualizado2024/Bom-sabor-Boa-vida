@@ -4,9 +4,72 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bom sabor, Boa vida</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/main.js" defer></script>
 </head>
 <body>
-    
+    <header id="cabecalho">
+        <img id="logo" src="assets/img/logo.png">
+        <form action=".">
+            <input type="search" name="search" id="search" autocomplete="off" placeholder="Procurar...">
+        </form>
+    </header>
+
+    <main>
+
+        <article id="opcoes">
+            <button id="botao-doces" onclick="selecionar('doces')">
+                <h2>Doces</h2>
+            </button>
+            <button id="botao-assados" onclick="selecionar('assados')">
+                <h2>Assados</h2>
+            </button>
+            <button id="botao-salgados" onclick="selecionar('salgados')">
+                <h2>Salgados</h2>
+            </button>
+            <button id="botao-bebidas" onclick="selecionar('bebidas')">
+                <h2>Bebidas</h2>
+            </button>
+        </article>
+
+
+        <article id="receitas">
+            <div id="doces" class="receita-categoria">
+
+                <section id="lista-receitas">
+                    <ul>
+                        <li id="mousse-maracuja" class="item-receita">Mousse de Maracujá</li>
+                        <li id="bolo-chocolate" class="item-receita">Bolo de Chocolate</li>
+                        <li id="bombom-uva" class="item-receita">Bombom de Uva na Travessa</li>
+                        <li id="prestigio" class="item-receita">Prestígio Caseiro</li>
+                    </ul>
+                </section>
+
+                <section class="visualizacao-receita">
+                    <h2>Mousse de Maracujá</h2>
+                    <img src="assets/receitas/mousse-maracuja.jpeg">
+                    <h3>Ingredientes</h3>
+                    <ul class="ingredientes">
+                        <li>3 frutas de maracujá</li>
+                        <li>1 caixa de leite condensado</li>
+                        <li>1 caixa de creme de leite</li>
+                        <li>100 ml de água</li>
+                    </ul>
+                    <h3>Modo de Preparo</h3>
+                    <p class="modo-de-preparo">
+                        - Adicione a polpa do maracujá e a água em liquidificador e bata<br>
+                        - Logo em seguida penere o suco e reserve em uma vasilha separada<br>
+                        - Em seguida adicione o leite condensado e o creme de leite no liquidificador e bata<br>
+                        - Enquanto bate, vá adicionando aos poucos o suco na mistura, e garanta que está bem batido<br>
+                        - Após isso adicione toda a mistura em uma vasilha e deixe ela na geladeira por 1 hora no mínimo
+                    </p>
+                    <span></span>
+                    <img class="fullview" src="assets/receitas/mousse-maracuja.jpeg">
+                    <span></span>
+                </section>
+
+        </article>
+
+    </main>
 </body>
 </html>
