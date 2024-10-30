@@ -132,7 +132,7 @@ main #opcoes button {
     justify-content: center;
     align-items: center;
     width: 30vw;
-    height: 120px;
+    height: 140px;
     border: none;
     border-radius: 2vw;
     margin: 2vw;
@@ -194,11 +194,8 @@ main #opcoes button:hover {
     height: 100vh;
     transform: translateY(150vh);
 }
-#receitas .receita-categoria {
-    display: none;
-}
 
-#receitas div #lista-receitas {
+#receitas #lista-receitas {
     position: fixed;
     width: 30vw;
     height: 80vh;
@@ -207,7 +204,7 @@ main #opcoes button:hover {
     background-color: var(--primaria);
     z-index: 10;
 }
-#receitas div::after {
+#receitas::after {
     content: "";
     display: inline-block;
     position: fixed;
@@ -220,7 +217,7 @@ main #opcoes button:hover {
     background-color: var(--secundaria);
     z-index: 5;
 }
-#receitas div #lista-receitas ul li{
+#receitas #lista-receitas ul li{
     padding: 0.8vh;
     border-radius: 1vw;
     margin: 2vh 1vw;
@@ -234,7 +231,7 @@ main #opcoes button:hover {
     list-style-type: none;
 }
 
-#receitas div .visualizacao-receita {
+#receitas #visualizacao-receita {
     position: fixed;
     right: 0;
     width: 45vw;
@@ -246,10 +243,10 @@ main #opcoes button:hover {
     overflow-y: scroll;
     z-index: 15;
 }
-#receitas div .visualizacao-receita::-webkit-scrollbar {
+#receitas #visualizacao-receita::-webkit-scrollbar {
     display: none;
 }
-#receitas div .visualizacao-receita h2 {
+#receitas #visualizacao-receita h2 {
     width: 100%;
     padding: 1.5vw;
     border-radius: 1.5vw;
@@ -261,18 +258,18 @@ main #opcoes button:hover {
     letter-spacing: 2px;
     font-family: "Grape Nuts", cursive;
 }
-#receitas div .visualizacao-receita img {
+#receitas #visualizacao-receita img {
     width: 35vw;
     height: 20vh;
     border-radius: 1.5vw;
     margin: 1vh 5vw;
     object-fit: cover;
 }
-#receitas div .visualizacao-receita .fullview {
+#receitas #visualizacao-receita #fullview-receita {
     border-radius: 2vw;
     height: min-content;
 }
-#receitas div .visualizacao-receita h3 {
+#receitas #visualizacao-receita h3 {
     width: 100%;
     margin: 3vh 0 1vh 0;
     text-align: center;
@@ -281,11 +278,11 @@ main #opcoes button:hover {
     font-size: 2.3vw;
     font-family: "Hammersmith One", sans-serif;
 }
-#receitas div .visualizacao-receita span {
+#receitas #visualizacao-receita span {
     display: block;
     margin: 5vh 0;
 }
-#receitas div .visualizacao-receita .ingredientes {
+#receitas #visualizacao-receita #ingredientes {
     display: grid;
     grid-template-columns: 20vw 20vw;
     width: 40vw;
@@ -295,7 +292,7 @@ main #opcoes button:hover {
     font-weight: 900;
     font-family: "Hammersmith One", sans-serif;
 }
-#receitas div .visualizacao-receita .modo-de-preparo {
+#receitas #visualizacao-receita #modo-de-preparo {
     width: 40vw;
     margin: 0 2.5vw;
     letter-spacing: 0.08vw;
